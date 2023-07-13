@@ -1,5 +1,7 @@
-<h1 align='center'>Check-list project ✅
-</h1>
+<div align='center'>
+<h1>Check-list project</h1>
+<img src="https://media.giphy.com/media/Wrlwh4k4Uz1o3imeZg/giphy.gif" width="150"/>
+</div>
 <h3>This is a simple checklist project built with React using Class Components. The project allows users to create and manage a list of tasks by adding and deleting items from the checklist. It provides an intuitive user interface with "Add" and "Delete" buttons for easy interaction.</h3>
 <hr>
 <h2 align="center"> <em>Features</em></h2>
@@ -25,14 +27,13 @@
   <li>To delete all the tasks, click on the "Delete" button underneath the list. The task will be removed from the checklist.</li>
 </ol>
 <hr>
-<h2 align="center"> <em>Technologies used</em></h2>
-<p>This project is built with: 
-  <ul>
-    <li>React (Class Components)</li>
-    <li>JavaScript</li>
-    <li>HTML5</li>
-    <li>CSS3</li>
-  </ul>
+<div align="center">
+<h2><em>This project is built with:</em></h2>
+  <img src='https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg' width='80px'/>
+  <img src='https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg' width='80px'/>
+  <img src='https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg' width='80px'/>
+  <img src='https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg' width='80px'/>
+</div>
 <hr>
 <h2 align="center"> <em>License</em></h2>
 <p>This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of this license.</p>
