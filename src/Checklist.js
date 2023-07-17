@@ -1,10 +1,12 @@
 import { Component } from "react";
-import checked from './checked.png'
+import circle from './circle.png'
+import check from './check.png'
 
 export class Checklist extends Component {
   state = {
     userInput: "",
     itemList: [],
+    checked: true,
   };
 
   onFormSubmit(e) {
@@ -35,7 +37,16 @@ export class Checklist extends Component {
     listArray = []
     this.setState({itemList: listArray})
   }
-
+  handleClick =() => {
+    this.handleEvent1();
+    this.handleEvent2();
+  }
+  handleEvent1 = () => {
+    this.crossItem()
+  }
+  handleEvent2 = () => {
+    this.setState({checked : !this.state.checked})
+  }
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
@@ -52,22 +63,29 @@ export class Checklist extends Component {
           </div>
 
           <div>
-            <button className="btnAdd" onClick={() => this.addItem(this.state.userInput)}>
+            <button
+              className="btnAdd"
+              onClick={() => this.addItem(this.state.userInput)}
+            >
               Add
             </button>
           </div>
-          <ul> 
-            
+          <ul>
             {this.state.itemList.map((item, index) => (
-               
-                <li onClick={this.crossItem} key={index}> <img className="imgCheck" src={checked} alt="chech box" />
+              <li onClick={this.handleClick}  key={index}>
+                <img className="imgCheck" src={this.state.checked ? {circle} : {check}} alt="check box" />{" "}
                 {item}
-                </li>
+              </li>
             ))}
           </ul>
 
           <div>
-            <button className="btnDel" onClick={() => this.deleteItem(this.state.userInput)}>Delete</button>
+            <button
+              className="btnDel"
+              onClick={() => this.deleteItem(this.state.userInput)}
+            >
+              Delete
+            </button>
           </div>
         </div>
       </form>
