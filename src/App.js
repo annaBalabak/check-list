@@ -19,7 +19,7 @@ function App() {
           ></path>
         </svg>
       </div>
-      <header>
+      <header className='container'>
         <h1>Check-list </h1>
       </header>
 

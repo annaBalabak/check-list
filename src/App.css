@@ -6,10 +6,6 @@
   --primary-font: "Belanosima", sans-serif;
   --secondary-font: "Pacifico", cursive;
 }
-
-body {
-  text-align: center;
-}
 .wave {
   position: absolute;
   left: 0;
@@ -55,6 +51,7 @@ h1 {
 }
 
 input {
+  text-align: center;
   padding: 10px;
   width: 30%;
   border: none;
@@ -74,22 +71,18 @@ button {
 .btnDel {
   background-color: var(--accent-color);
 }
-ul {
+.container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 li {
-  align-self: flex-start;
   list-style: none;
   font-size: 25px;
   font-family: var(--secondary-font);
   background-color: #f1f2f3;
   color: var(--text-color);
-  margin: 10px 0;
+  margin: 0;
 }
 
 .checked {

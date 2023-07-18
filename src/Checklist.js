@@ -1,6 +1,6 @@
 import { Component } from "react";
-import circle from './circle.png'
-import check from './check.png'
+import circle from "./circle.png";
+import check from "./check.png";
 
 export class Checklist extends Component {
   state = {
@@ -24,32 +24,29 @@ export class Checklist extends Component {
       listArray.push({
         todo: input,
         done: false,
-      })
+      });
       this.setState({ itemList: listArray, userInput: "" });
     }
   }
 
-  crossItem(i){
+  crossItem(i) {
     let newArray = [];
-    this.state.itemList.map((todo, index) =>(
-      index === i ? newArray.push({...todo,
-      done: true,})
-      : newArray.push(todo)
-    ))
-    this.setState({itemList: newArray})
+    this.state.itemList.map((todo, index) =>
+      index === i ? newArray.push({ ...todo, done: true }) : newArray.push(todo)
+    );
+    this.setState({ itemList: newArray });
   }
-            
-  deleteItem(){
-    let listArray = this.state.itemList
-    listArray = []
-    this.setState({itemList: listArray});
+
+  deleteItem() {
+    let listArray = this.state.itemList;
+    listArray = [];
+    this.setState({ itemList: listArray });
   }
 
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
-        <div className="Checklist">
-          <div>
+        <div className="container">
             <input
               type="text"
               placeholder="Enter an item or a task..."
@@ -60,7 +57,7 @@ export class Checklist extends Component {
             />
           </div>
 
-          <div>
+          <div className="container">
             <button
               className="btnAdd"
               onClick={() => this.addItem(this.state.userInput)}
@@ -68,15 +65,26 @@ export class Checklist extends Component {
               Add
             </button>
           </div>
-          <ul>
-            {this.state.itemList.map((item, index) => (
-              <li key={index} className={item.done === true ? "checked" : null} onClick={() => this.crossItem(index)}  >
-                <img className="imgCheck" src={item.done === true ? check : circle} alt="check box" /> {item.todo}
-              </li>
-            ))}
-          </ul>
+          <div className="container">
+            <ul>
+              {this.state.itemList.map((item, index) => (
+                <li
+                  key={index}
+                  className={item.done === true ? "checked" : null}
+                  onClick={() => this.crossItem(index)}
+                >
+                  <img
+                    className="imgCheck"
+                    src={item.done === true ? check : circle}
+                    alt="check box"
+                  />{" "}
+                  {item.todo}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <div>
+          <div className="container">
             <button
               className="btnDel"
               onClick={() => this.deleteItem(this.state.userInput)}
@@ -84,7 +92,6 @@ export class Checklist extends Component {
               Delete
             </button>
           </div>
-        </div>
       </form>
     );
   }
