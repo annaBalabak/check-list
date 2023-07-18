@@ -1,115 +1,120 @@
-:root{
-    --primary-color: #d2dacf;
-    --secondary-color: #75c540;
-    --accent-color: #fe2121;
-    --text-color: #555953;
-    --primary-font: 'Belanosima', sans-serif;
-    --secondary-font: 'Pacifico', cursive;
+:root {
+  --primary-color: #d2dacf;
+  --secondary-color: #75c540;
+  --accent-color: #fe2121;
+  --text-color: #555953;
+  --primary-font: "Belanosima", sans-serif;
+  --secondary-font: "Pacifico", cursive;
 }
 
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
 .wave {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: -1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
 }
-.shape-divider-top{
-    position: fixed;
-    top: 0;
+.shape-divider-top {
+  position: fixed;
+  top: 0;
 }
 
 .shape-divider-top svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 146px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 146px;
 }
 
 .shape-divider-bottom {
-    position: fixed;
-    bottom: 0;
-    transform: rotate(180deg);
+  position: fixed;
+  bottom: 0;
+  transform: rotate(180deg);
 }
 
 .shape-divider-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(155% + 1.3px);
-    height: 241px;
+  position: relative;
+  display: block;
+  width: calc(155% + 1.3px);
+  height: 241px;
 }
 
 .shape-fill {
-    fill: var(--primary-color);
+  fill: var(--primary-color);
 }
 
-h1{
-    margin-top: 50px;
-    font-size: 80px;
-    color: var(--secondary-color);
-    font-family: var(--primary-font);
-
+h1 {
+  margin-top: 50px;
+  font-size: 80px;
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
 }
 
-input{
-    padding: 10px;
-    width: 30%;
-    border: none;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+input {
+  padding: 10px;
+  width: 30%;
+  border: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-button{
-    margin: 20px 0px;
-    width: 150px;
-    padding: 5px;
+button {
+  margin: 20px 0px;
+  width: 150px;
+  padding: 5px;
 }
-.btnAdd{
-    background-color: var(--secondary-color);
+.btnAdd {
+  background-color: var(--secondary-color);
 }
-.btnDel{
-    background-color: var(--accent-color);
+.btnDel {
+  background-color: var(--accent-color);
 }
-ul{
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-li{
-list-style: none;
-font-size: 25px;
-font-family: var(--secondary-font);
-background-color: #f1f2f3;
-color: var(--text-color);
-margin: 10px 0;
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.checked{
-text-decoration: line-through 2px var(--accent-color);
+li {
+  align-self: flex-start;
+  list-style: none;
+  font-size: 25px;
+  font-family: var(--secondary-font);
+  background-color: #f1f2f3;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+.checked {
+  text-decoration: line-through 2px var(--accent-color);
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-        .shape-divider-top svg {
-        width: calc(100% + 1.3px);
-        height: 85px;
-    }
-    .shape-divider-bottom svg {
-        width: calc(148% + 1.3px);
-        height: 155px;
-    }
-    input{
-        width: fit-content;
-    }
+  .shape-divider-top svg {
+    width: calc(100% + 1.3px);
+    height: 85px;
+  }
+  .shape-divider-bottom svg {
+    width: calc(148% + 1.3px);
+    height: 155px;
+  }
+  input {
+    width: fit-content;
+  }
 }
-@media(max-width: 400px){
-h1{
+@media (max-width: 400px) {
+  h1 {
     font-size: 50px;
-}
-button{
+  }
+  button {
     width: 100px;
-}
+  }
 }

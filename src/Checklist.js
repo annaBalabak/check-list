@@ -6,7 +6,6 @@ export class Checklist extends Component {
   state = {
     userInput: "",
     itemList: [],
-    checked: true,
   };
 
   onFormSubmit(e) {
@@ -22,31 +21,30 @@ export class Checklist extends Component {
       alert("Please, enter an item or a task");
     } else {
       let listArray = this.state.itemList;
-      listArray.push(input);
+      listArray.push({
+        todo: input,
+        done: false,
+      })
       this.setState({ itemList: listArray, userInput: "" });
     }
   }
 
-  crossItem(e){
-    let li = e.target
-    li.classList.toggle('checked')
+  crossItem(i){
+    let newArray = [];
+    this.state.itemList.map((todo, index) =>(
+      index === i ? newArray.push({...todo,
+      done: true,})
+      : newArray.push(todo)
+    ))
+    this.setState({itemList: newArray})
   }
             
   deleteItem(){
     let listArray = this.state.itemList
     listArray = []
-    this.setState({itemList: listArray})
+    this.setState({itemList: listArray});
   }
-  handleClick =() => {
-    this.handleEvent1();
-    this.handleEvent2();
-  }
-  handleEvent1 = () => {
-    this.crossItem()
-  }
-  handleEvent2 = () => {
-    this.setState({checked : !this.state.checked})
-  }
+
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
@@ -72,9 +70,8 @@ export class Checklist extends Component {
           </div>
           <ul>
             {this.state.itemList.map((item, index) => (
-              <li onClick={this.handleClick}  key={index}>
-                <img className="imgCheck" src={this.state.checked ? {circle} : {check}} alt="check box" />{" "}
-                {item}
+              <li key={index} className={item.done === true ? "checked" : null} onClick={() => this.crossItem(index)}  >
+                <img className="imgCheck" src={item.done === true ? check : circle} alt="check box" /> {item.todo}
               </li>
             ))}
           </ul>
