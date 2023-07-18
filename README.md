@@ -2,12 +2,12 @@
 <h1>Check-list project</h1>
 <img src="https://media.giphy.com/media/Wrlwh4k4Uz1o3imeZg/giphy.gif" width="150"/>
 </div>
-<h3>This is a simple checklist project built with React using Class Components. The project allows users to create and manage a list of tasks by adding and deleting items from the checklist. It provides an intuitive user interface with "Add" and "Delete" buttons for easy interaction.</h3>
+<h3>This is a simple checklist project, built with React using Class Components. The project allows users to create and manage a list of tasks, by adding and deleting items from the checklist. It provides an intuitive user interface with "Add" and "Delete" buttons for easy interaction.</h3>
 <hr>
 <h2 align="center"> <em>Features</em></h2>
 <p><b>Add Task: </b> Users can enter a task in the input field and press the "Add" button to add it to the checklist. The new task will appear in the list of tasks.</p>
-<p><b>Mark as done: </b>After completing the task tap on it to cross it off the list.</p>
-<p><b>Delete Task: </b> Each task in the checklist has a corresponding "Delete" button. Users can click on the delete button to remove a task from the checklist.</p>
+<p><b>Mark as done: </b>After completing the task, tap on it to cross it off the list. A check mark will appear in the box next to the task.</p>
+<p><b>Delete Task: </b> After completting all the tasks, users can click on the delete button to clean the checklist.</p>
 <hr>
 <h2 align="center"> <em>Setup</em></h2>
 <p>To run this project on your local machine, follow these steps:</p>
