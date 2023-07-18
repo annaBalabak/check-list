@@ -7,7 +7,7 @@
 <h2 align="center"> <em>Features</em></h2>
 <p><b>Add Task: </b> Users can enter a task in the input field and press the "Add" button to add it to the checklist. The new task will appear in the list of tasks.</p>
 <p><b>Mark as done: </b>After completing the task, tap on it to cross it off the list. A check mark will appear in the box next to the task.</p>
-<p><b>Delete Task: </b> After completting all the tasks, users can click on the delete button to clean the checklist.</p>
+<p><b>Delete Task: </b> After completing all the tasks, users can click on the delete button to clean the checklist.</p>
 <hr>
 <h2 align="center"> <em>Setup</em></h2>
 <p>To run this project on your local machine, follow these steps:</p>
