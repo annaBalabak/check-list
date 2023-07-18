@@ -7,7 +7,7 @@
 <h2 align="center"> <em>Features</em></h2>
 <p><b>Add Task: </b> Users can enter a task in the input field and press the "Add" button to add it to the checklist. The new task will appear in the list of tasks.</p>
 <p><b>Mark as done: </b>After completing the task, tap on it to cross it off the list. A check mark will appear in the box next to the task.</p>
-<p><b>Delete Task: </b> After completing all the tasks, users can click on the delete button to clean the checklist.</p>
+<p><b>Delete Task: </b> When all the tasks have been completed, users can click on the delete button to remove all the tasks from the list.</p>
 <hr>
 <h2 align="center"> <em>Setup</em></h2>
 <p>To run this project on your local machine, follow these steps:</p>
@@ -20,11 +20,11 @@
 <hr>
 <h2 align="center"> <em>Usage</em></h2>
 <ol>
-  <li>Once the application is running, you will see an input field and a "Add" button at the top of the page.</li>
+  <li>Once the application is running, you will see an input field and the "Add" button underneath it.</li>
   <li>Enter a task in the input field and press "Enter" or click the "Add" button to add it to the checklist.</li>
   <li>The newly added task will appear in the list of tasks below the input field.</li>
-  <li>To mark the task as done, simply tap on it, and the red line will apper, crossing the task out of the list. If you want to remove the red line click on the task again.</li>
-  <li>To delete all the tasks, click on the "Delete" button underneath the list. The task will be removed from the checklist.</li>
+  <li>To mark the task as done, simply tap on it, and the red line will apper, crossing the task out of the list. In the checkbox next to the task will appear a check mark.</li>
+  <li>To delete all the tasks, click on the "Delete" button underneath the list. The tasks will be removed from the checklist.</li>
 </ol>
 <hr>
 <div align="center">
